@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sacola.css">
+    <title>Sacola</title>
+</head>
+<body>
+    <header  class="H"></header>
+        <div class="logo-container">
+            <div class="logo">
+                <h1>Code Craft</h1>
+            </div>
+            <div class="descricao">
+                <p>Cursos De TI</p>
+            </div>
+        </div>
+        <button class="back-btn" onclick="window.history.back()">Voltar</button>
+    </header>
+    
+<div class="wrapper">
+    <div class="container">
+        <div class="tools">
+            <div class="circle">
+                <span class="red box"></span>
+            </div>
+            <div class="circle">
+                <span class="yellow box"></span>
+            </div>
+            <div class="circle">
+                <span class="green box"></span>
+            </div>
+        </div>
+        <div class="card-container">
+                <img src="../assets/node.jpeg"> 
+                <h1>Java</h1>
+                <span class="price">R$ 100,00</span>
+        </div>
+        
+    </div>
+
+   
+    <form class="plan-chooser">
+        <div class="header">
+            <span class="title">Forma De Pagamento</span>
+            <br><br>
+        </div>
+
+        <div class="plan-option">
+            <input value="free" id="free" name="plan" type="radio">
+            <label for="free">
+                <div class="plan-info">
+                    <span class="plan-cost">R$100,00</span>
+                    <span class="plan-name">Pix</span>
+                </div>
+                <span class="reduction"> Save 6% </span>
+            </label>
+        </div>
+
+        <div class="plan-option">
+            <input value="monthly" id="monthly" name="plan" type="radio">
+            <label for="monthly">
+                <div class="plan-info">
+                    <span class="plan-cost">R$100,00</span>
+                    <span class="plan-name">Cartão De Débito</span>
+                </div>
+                <span class="reduction"> Save 6% </span>
+            </label>
+        </div>
+
+        <div class="plan-option">
+            <input value="annual" id="annual" name="plan" type="radio">
+            <label for="annual">
+                <div class="plan-info">
+                    <span class="plan-cost">R$120,00</span>
+                    <span class="plan-name">Cartão De Crédito</span>
+                </div>
+            </label>
+        </div>
+        <a href="#" title="" class="choose-btn"> Start </a>
+    </form>
+</div>
+</body>
+</html>

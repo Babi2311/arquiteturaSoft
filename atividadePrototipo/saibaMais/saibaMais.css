@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.H {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin-top: -27px;
+    border-radius: 6px;
+    height: 150px;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.logo {
+    font-size: 23px;
+}
+
+.descricao {
+    font-size: 15px;
+    margin-top: -12px; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.search-bar input {
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+}
+
+.button-container {
+    display: flex;
+    margin-left: 50%;
+}
+
+.btn, .btn2 {
+    width: 6.5em;
+    height: 2.3em;
+    margin: 0.5em;
+    margin-left: 50px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 0.625em;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+button:hover {
+    color: black;
+}
+
+button:after {
+    content: "";
+    background: white;
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+}
+
+button:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.content { 
+    display: flex;
+    align-items: flex-start;
+    padding: 2% 7%;
+    justify-content: space-between;
+}
+
+.card1 {
+    position: relative;
+    width: 60%; 
+    border-radius: 10px;
+    background-color: rgba(17, 24, 39, 1); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px; 
+    text-align: center;
+    color: white;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card1 img.card__image {
+    width: 95%; 
+    height: auto; 
+    object-fit: cover;
+    border-radius: 10px;
+    transition: opacity 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(17, 24, 39, 1);
+    color: white;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.6s, transform 0.6s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    text-align: center; 
+    transform: rotate(10deg); 
+}
+
+.card1:hover img.card__image {
+    opacity: 0;
+}
+
+.card1:hover .card__content {
+    opacity: 1;
+    transform: rotate(0deg); 
+}
+
+
+.card1:hover {
+    transform: rotate(5deg); 
+}
+
+.card__content h1 {
+    font-size: 1.5rem; 
+    margin-bottom: 10px; 
+}
+
+.card__content h3 {
+    font-size: 1rem; 
+    line-height: 1.5; 
+    text-align: left; 
+    margin: 0; 
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    border-radius: 8px;
+    background-color: rgba(17, 24, 39, 1);
+    padding: 7%;
+    margin-top: 7%;
+    color: white;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.desc {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: rgba(156, 163, 175, 1);
+}
+
+.lists {
+    margin-bottom: 20px;
+}
+
+.lists .list {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.lists .list svg {
+    height: 1.5rem;
+    width: 1.5rem;
+    flex-shrink: 0;
+    margin-right: 10px;
+    color: rgba(99, 102, 241, 1);
+}
+
+.action {
+    background-color: rgba(79, 70, 229, 1);
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
